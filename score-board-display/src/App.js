@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import Display from "./components/Display";
 import Dashboard from "./components/Dashboard";
 
+import styled from 'styled-components'
+
+const Container = styled.div`
+  text-align: center;
+`
+
 const App = () => {
   const [balls, setBalls] = useState(0);
   const [strikes, setStrikes] = useState(0);
@@ -35,7 +41,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <Container>
       <h1>Score Board</h1>
       <Display balls={balls} strikes={strikes} />
       <Dashboard
@@ -44,7 +50,7 @@ const App = () => {
         foul={foul}
         hit={hit}
       />
-    </>
+    </Container>
   );
 };
 
