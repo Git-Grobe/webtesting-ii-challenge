@@ -32,7 +32,7 @@ const App = () => {
   };
 
   const foul = () => {
-    strikes < 2 ? setStrikes(strikes + 1 ) : setStrikes(0);
+    strikes < 2 ? setStrikes(strikes + 1 ) : setStrikes(2);
     // if (strikes < 2) {
     //   setStrikes(strikes + 1 );
     // };
