@@ -14,25 +14,29 @@ const App = () => {
   const [strikes, setStrikes] = useState(0);
 
   const ball = () => {
-    if (balls < 3) {
-      setBalls(balls + 1 );
-    } else {
-      setBalls(0);
-    }
+    balls < 3 ? setBalls(balls + 1) : setBalls(0);
+    // if (balls < 3) {
+    //   setBalls(balls + 1 );
+    // } else {
+    //   setBalls(0);
+    // }
   };
 
   const strike = () => {
-    if (strikes === 3) {
-      setStrikes(0);
-    } else {
-      setStrikes(strikes + 1 );
-    }
+    strikes >= 2 ? setStrikes(0) : setStrikes(strikes + 1)
+    // if (strikes === 3) {
+    //   setStrikes(0);
+    // } else {
+    //   setStrikes(strikes + 1 );
+    // }
   };
 
   const foul = () => {
-    if (strikes < 2) {
-      setStrikes(strikes + 1 );
-    }
+    strikes < 2 ? setStrikes(strikes + 1 ) : setStrikes(0);
+    // if (strikes < 2) {
+    //   setStrikes(strikes + 1 );
+    // };
+    
   };
 
   const hit = () => {
